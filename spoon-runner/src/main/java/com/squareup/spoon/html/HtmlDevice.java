@@ -76,7 +76,7 @@ final class HtmlDevice {
   static final class TestResult implements Comparable<TestResult> {
     static TestResult from(String serial, DeviceTest test, DeviceTestResult result, File output) {
       String className = test.getClassName();
-      String methodName = test.getMethodName();
+      String methodName = test.getAnnotation();
       String classSimpleName = HtmlUtils.getClassSimpleName(className);
       String testId = HtmlUtils.testClassAndMethodToId(className, methodName);
       String status = HtmlUtils.getStatusCssClass(result);
